@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
@@ -11,7 +10,8 @@
 <div class="container">
     <h2 class="mb-4">Welcome, Admin!</h2>
     <div class="card p-4 shadow-sm" style="max-width: 400px;">
-        <a th:href="@{/admin/users}" class="btn btn-primary mb-2">Manage Users</a>
+        <a th:href="@{/admin/analytics}" class="btn btn-primary mb-2">View Analytics</a>
+        <a th:href="@{/admin/users}" class="btn btn-outline-primary mb-2">Manage Users</a>
         <a th:href="@{/admin/postings}" class="btn btn-outline-primary">Manage Job Postings</a>
     </div>
 </div>

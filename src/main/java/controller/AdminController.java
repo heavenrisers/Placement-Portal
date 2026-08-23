@@ -42,4 +42,14 @@ public class AdminController {
         adminService.deleteUser(id);
         return "redirect:/admin/users";
     }
+
+    @Autowired
+    private com.placementportal.placementportal.service.AnalyticsService analyticsService;
+
+    @GetMapping("/analytics")
+    public String viewAnalytics(Model model) {
+        java.util.Map<String, Object> stats = analyticsService.getDashboardStats();
+        model.addAttribute("stats", stats);
+        return "admin-analytics";
+    }
 }
